@@ -1,0 +1,31 @@
+﻿<Window x:Class="DavidsRevitApp.ReNumGrid.ReNumGridMainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DavidsRevitApp"
+             mc:Ignorable="d"
+             MinHeight="300" MinWidth="210" MaxWidth="211" MaxHeight="301" Topmost="False">
+    <Grid>
+        <Button x:Name="RenumberingBtn" Content="Перенумеровать" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="110,0,5,50" Click="RenumberingBtn_Click" Height="18" FontSize="11"/>
+        <CheckBox x:Name="StartCheckBox" Content="С начала" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" IsChecked="True" Checked="StartCheckBox_Checked"/>
+        <CheckBox x:Name="EndCheckBox" Content="С конца" HorizontalAlignment="Left" Margin="100,35,0,0" VerticalAlignment="Top" Checked="EndCheckBox_Checked"/>
+        <TextBox x:Name="StartSymbol" HorizontalAlignment="Left" Margin="70,0,0,50" TextWrapping="NoWrap" Text="1" VerticalAlignment="Bottom" Width="35" Height="18"/>
+        <TextBox x:Name="PreNameTextBox"  HorizontalAlignment="Left" Margin="10,0,0,10" TextWrapping="Wrap" Text="До" VerticalAlignment="Bottom" Width="45" Height="18"/>
+        <TextBox x:Name="PastNameTextBox" HorizontalAlignment="Left" Margin="60,0,0,10" TextWrapping="Wrap" Text="После" VerticalAlignment="Bottom" Width="45" Height="18"/>
+        <Label Content="Префиксы и суффиксы" HorizontalAlignment="Left" Margin="5,0,0,23" VerticalAlignment="Bottom"/>
+        <Button x:Name="AddBtn" Content="Добавить" HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" Width="79" Height="18" FontSize="11" Click="AddBtn_Click"/>
+        <Label Content="Не использовать" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BadSymbolTextBox" HorizontalAlignment="Left" Margin="105,55,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" TextChanged="BadSymbolTextBox_TextChanged" Width="95"/>
+        <Button x:Name="SelectGridsBtn" Content="Выбрать оси на виде" HorizontalAlignment="Center" VerticalAlignment="Top" Click="SelectGridsBtn_Click" Width="120"/>
+        <Label Content="Перенумеровать:" HorizontalAlignment="Left" Margin="0,15,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="VerCheckBox" Content="Ver" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" IsChecked="True" Checked="VerCheckBox_Checked"/>
+        <TextBox VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" x:Name="VerGridList" Margin="0,95,140,75" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <CheckBox x:Name="HorCheckBox" Content="Hor" HorizontalAlignment="Center" Margin="0,75,10,0" VerticalAlignment="Top" Checked="HorCheckBox_Checked"/>
+        <TextBox VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" x:Name="HorGridList" Margin="70,95,70,75" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <CheckBox x:Name="OthCheckBox" Content="Oth" HorizontalAlignment="Right" Margin="0,76,21,0" VerticalAlignment="Top" Checked="OthCheckBox_Checked"/>
+        <TextBox VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" x:Name="OthGridList" Margin="140,95,0,75" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Label Content="С символа:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,46"/>
+
+    </Grid>
+</Window>

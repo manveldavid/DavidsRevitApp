@@ -1,0 +1,19 @@
+﻿<Window x:Class="DavidsRevitApp.AutoFlag.AutoFlagMainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DavidsRevitApp.AutoFlag"
+             mc:Ignorable="d" MinWidth="310" MaxWidth ="310" MaxHeight="180"  MinHeight="180" Topmost="False">
+    <Grid>
+        <Button x:Name="CreateFlagBtn" Content="Создать экземпляр автофлажка" Margin="10,35,10,0" VerticalAlignment="Top" Click="CreateFlagBtn_Click"/>
+        <Button x:Name="SelectFlagBtn" Content="Выбрать экземмпляр автофлажка" Margin="10,60,10,0" VerticalAlignment="Top" Click="SelectFlagBtn_Click"/>
+        <Button x:Name="ParseFlagBtn" Content="Заполнить автофлажок" Margin="125,85,35,0" VerticalAlignment="Top" IsEnabled="False" Click="ParseFlagBtn_Click"/>
+        <Button x:Name="DirectionFlagBtn" Content="Задать направление стрелки" Margin="10,110,10,0" VerticalAlignment="Top" IsEnabled="False" Click="DirectionFlagBtn_Click"/>
+        <CheckBox x:Name="ConstructionCheckBox" Content="По конструкции" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button x:Name="WatchConstructionIdsBtn" Content="Ids" HorizontalAlignment="Right" Margin="0,85,10,0" VerticalAlignment="Top" IsEnabled="False" Click="WatchConstructionIdsBtn_Click"/>
+        <Label x:Name="SelectAutoFlagLable" Content="Не выбран экземпляр автофлажка" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Image x:Name="SelectAutoFlagImage" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="20" Margin="0,5,10,0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="DavidsRevitApp.WallSweeps.WallSweepsFamilyReNamerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DavidsRevitApp"
+             mc:Ignorable="d" MinWidth="200" MinHeight="100" WindowStyle="ToolWindow" ResizeMode="CanResize">
+    <Grid>
+        <Button x:Name="ReNamerBTN" Content="Переименовать" HorizontalAlignment="Right" Margin="50,30,10,10" VerticalAlignment="Bottom" Width="100" Click="ReNamerBTN_Click"/>
+        <TextBox x:Name="FamilyNameBox" Margin="20,0,20,40" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Text="Name"/>
+
+    </Grid>
+</Window>

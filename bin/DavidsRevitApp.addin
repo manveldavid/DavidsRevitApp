@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>DavidsApp</Name>
+    <Assembly>D:\User\repos\C#\DavidsRevitApp\bin\Debug\DavidsRevitApp.dll</Assembly>
+    <ClientId>28fba9df-c3c6-4b3a-b324-2657393213b3</ClientId>
+    <FullClassName>DavidsRevitApp.DavidsApp</FullClassName>
+    <VendorId>ADSK</VendorId>
+    <VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
