@@ -36,7 +36,7 @@ namespace DavidsRevitApp.RoomFinishing
                 var roomNums = SelectedRooms.Select(x => x.Room.Number).ToList(); 
                 TaskDialog.Show("hello", string.Join(", ", roomNums));
                 
-                List<List<List<Element>>> bounds = SelectedRooms
+                var bounds = SelectedRooms
                     .Select(x => x.Room.GetBoundarySegments(new SpatialElementBoundaryOptions())
                     .Select(y => y.Select(k => doc.GetElement(k.ElementId)).ToList()).ToList()).ToList();
                 
@@ -47,7 +47,7 @@ namespace DavidsRevitApp.RoomFinishing
                     foreach(var el in roomNums)
                     {
                         List<Element> elementsOfRoom = bounds[roomNums.IndexOf(el)].First().ToList();
-                        List<List<Parameter>> Params = elementsOfRoom.Where(f => f != null)
+                        var Params = elementsOfRoom.Where(f => f != null)
                             .Select(e => e.GetOrderedParameters().ToList()).ToList();
                         List<Parameter> CurParams = Params.Where(p => p.Any(o => o.Definition.Name == paramName))
                             .Select(p => p.Where(k => k.Definition.Name == paramName).First()).ToList();
